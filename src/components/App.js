@@ -5,6 +5,7 @@ import Header from "./Header";
 import About from "./About";
 import Contact from "./Contact";
 import Title from "./Title";
+import Uses from "./Uses";
 import Portfolio from "./Portfolio";
 
 //TODO fix the header link
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/" exact component={About} />
             <Route path="/Portfolio" component={Portfolio} />
             <Route path="/Contact" component={Contact} />
+            <Route path="/Uses" component={Uses} />
           </Switch>
         </Container>
       </Router>
