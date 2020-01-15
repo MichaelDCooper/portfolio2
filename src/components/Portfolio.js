@@ -4,7 +4,24 @@ import github from "../github";
 
 const getGithub = async () => {
   const response = await github.get("/users/MichaelDCooper/events/public");
-  console.log(response);
+
+  //TODO this is filtering the events recieved from github. Make this better
+  for (let i = 0; i < 15; i++) {
+    const data = response.data[i];
+    //this will filter commits
+    if (data.payload.commits) {
+      console.log(data.payload.commits[0].message);
+    } else if (data.repo.name) {
+      console.log(data);
+    }
+
+    if (!data.commits) {
+      console.log(data);
+    }
+
+    //console.log(response.data[i].payload.commits[i].message);
+    //console.log(data);
+  }
 };
 
 const Projects = () => {
@@ -17,7 +34,7 @@ const Projects = () => {
         development, as well as a live feed of my Github
       </p>
       <Divider />
-      <h2>Github Feed:</h2>
+      <h2>Github Activity:</h2>
     </div>
   );
 };
