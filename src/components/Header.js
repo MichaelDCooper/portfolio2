@@ -21,7 +21,6 @@ const Header = () => {
         to={getTo(name)}
         name={name}
         active={activeItem === name}
-        //might have to add logic here to alter home to '/'
         onClick={() => selectItem(name)}
       ></Menu.Item>
     );
