@@ -3,7 +3,9 @@ import { Menu } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [activeItem, selectItem] = useState("Home");
+  let currentPage = window.location.pathname.substr(1);
+
+  const [activeItem, selectItem] = useState(currentPage);
 
   const categories = ["Home", "Portfolio", "Contact", "Uses"];
 
