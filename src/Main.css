@@ -1,0 +1,29 @@
+@font-face{
+    font-family: 'Rubik', sans-serif;
+    src: "https://fonts.googleapis.com/css?family=Rubik&display=swap";
+
+}
+
+:root{
+    --black:#2e2e2e;
+    --main-font: Rubik
+}
+
+.title{
+    font-family: var(--main-font);
+    color: var(--black);
+    padding: 0.5rem;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+h2{
+    font-family: var(--main-font);
+    color: var(--black);
+    padding: 0.5rem;
+}
+p{
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 1.5rem;
+}

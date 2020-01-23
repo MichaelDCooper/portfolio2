@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import Title from "./Title";
 import Uses from "./Uses";
 import Portfolio from "./Portfolio";
+import "../Main.css";
 
 //TODO fix the header link
 
@@ -14,7 +15,7 @@ import { Container } from "semantic-ui-react";
 
 const App = () => {
   return (
-    <div>
+    <div className="background">
       <Router>
         <Header />
         <Container textAlign="center">
