@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 const Header = () => {
   let currentPage = window.location.pathname.substr(1);
 
-  const [activeItem, selectItem] = useState(currentPage);
+  const [activeItem, selectItem] = useState(
+    currentPage === "" ? "Home" : currentPage
+  );
 
   const categories = ["Home", "Portfolio", "Contact", "Uses"];
 
