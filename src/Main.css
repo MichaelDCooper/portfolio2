@@ -9,6 +9,15 @@
     --main-font: Rubik
 }
 
+.header-item{
+    font-size: 1.3rem;
+    font-family: var(--main-font);
+    color: orchid;
+    background-color: orchid;
+    
+
+}
+
 .title{
     font-family: var(--main-font);
     color: var(--black);
@@ -26,4 +35,5 @@ p{
     font-family: var(--main-font);
     font-weight: 400;
     font-size: 1.5rem;
+    text-align: left;
 }

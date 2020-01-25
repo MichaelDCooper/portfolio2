@@ -21,6 +21,7 @@ const Header = () => {
 
     return (
       <Menu.Item
+        className="header-item"
         as={Link}
         to={getTo(name)}
         name={name}
