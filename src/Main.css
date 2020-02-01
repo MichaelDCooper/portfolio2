@@ -6,34 +6,43 @@
 
 :root{
     --black:#2e2e2e;
-    --main-font: Rubik
+    /* --main-font: Rubik */
+    
 }
 
 .header-item{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: var(--main-font);
     color: orchid;
     background-color: orchid;
-    
-
 }
-
+/* 
+ToDo: Actaually Style this. Find a font. Do the thing */
 .title{
     font-family: var(--main-font);
     color: var(--black);
     padding: 0.5rem;
-    font-weight: 600;
-    font-size: 3rem;
+    /* font-weight: 100; */
+    font-size: 2rem;
 }
 
-h2{
+.sub-header{
     font-family: var(--main-font);
     color: var(--black);
     padding: 0.5rem;
+    font-weight: 600;
 }
 p{
     font-family: var(--main-font);
-    font-weight: 400;
+    font-weight: 100;
     font-size: 1.5rem;
     text-align: left;
+}
+
+.contact-info{
+    color:palevioletred;
+}
+
+.footer-text{
+    font-size: 1rem;
 }

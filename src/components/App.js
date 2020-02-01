@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import Title from "./Title";
 import Uses from "./Uses";
 import Portfolio from "./Portfolio";
+import Footer from "./Footer";
 import "../Main.css";
 
 //TODO fix the header link
@@ -26,6 +27,7 @@ const App = () => {
             <Route path="/Contact" component={Contact} />
             <Route path="/Uses" component={Uses} />
           </Switch>
+          <Footer />
         </Container>
       </Router>
     </div>
