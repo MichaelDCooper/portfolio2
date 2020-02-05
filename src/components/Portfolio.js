@@ -46,14 +46,14 @@ const Projects = () => {
 
   return (
     <div>
-      <h2>Projects and Repositories</h2>
+      <h2 className="ui left aligned header">Projects and Repositories</h2>
       <p>
         Here you can find a few projects that are in constant devlopment, as
         well as a feed of my Github activity, so you can keep up to date with
         what I'm currently working on:
       </p>
       <Divider />
-      <h2>Github Activity:</h2>
+      <h2 className="ui left aligned header">Github Activity:</h2>
       <div>{defaultGit}</div>
     </div>
   );

@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <div>
-      <h2>Contact</h2>
+      <h2 className="ui left aligned header">Contact</h2>
       <p>
         It's my goal to be available for everyone. If you have a question, want
         to reach out about a cool project, or just want to say hello, please
