@@ -1,29 +1,65 @@
 import React from "react";
-import { Grid } from "semantic-ui-react";
-import { Link } from "react-router-dom";
+import { Grid, List } from "semantic-ui-react";
 
 const Contact = () => {
   return (
     <div>
       <h2 className="ui left aligned header">Contact</h2>
-      <Grid columns={2} divided>
+      <Grid stackable columns={2}>
         <Grid.Row>
           <Grid.Column>
             <p>
-              It's my goal to be available for everyone. If you have a question,
+              It's my goal to be available to everyone. If you have a question,
               want to reach out about a cool project, or just want to say hello,
-              please feel free to send me an email.
+              please feel free to send me an email, add me on LinkedIn, etc.
             </p>
           </Grid.Column>
           <Grid.Column>
-            FIX This
-            <div className="">
-              <p>Email: mcooper628@gmail.com</p>
-              <p>
-                Github: <Link>Github.com/MichaelDCooper</Link>
-              </p>
-              <p>LinkedIn: LinkedIn.con/IN/MCooper51</p>
-            </div>
+            <List divided relaxed>
+              <List.Item>
+                <List.Icon
+                  name="mail outline"
+                  size="large"
+                  verticalAlign="middle"
+                />
+                <List.Content>
+                  <List.Header as="p">
+                    Email: <a>mcooper628@gmail.com</a>
+                  </List.Header>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Icon name="github" size="large" verticalAlign="middle" />
+                <List.Content>
+                  <List.Header as="p">
+                    Github:
+                    <a href="https://github.com/MichaelDCooper" target="_blank">
+                      {" "}
+                      MichaelDCooper
+                    </a>
+                  </List.Header>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Icon
+                  name="linkedin"
+                  size="large"
+                  verticalAlign="middle"
+                />
+                <List.Content>
+                  <List.Header as="p">
+                    LinkedIn:
+                    <a
+                      href="https://www.linkedin.com/in/michaelcooper51/"
+                      target="_blank"
+                    >
+                      {" "}
+                      MichaelCooper51
+                    </a>
+                  </List.Header>
+                </List.Content>
+              </List.Item>
+            </List>
           </Grid.Column>
         </Grid.Row>
       </Grid>

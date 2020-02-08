@@ -16,7 +16,7 @@ import { Container } from "semantic-ui-react";
 
 const App = () => {
   return (
-    <div className="background">
+    <div className="page-wrap">
       <Router>
         <Header />
         <Container textAlign="center">
