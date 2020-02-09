@@ -1,29 +1,22 @@
 @font-face{
-    font-family: 'Rubik', sans-serif;
-    src: "https://fonts.googleapis.com/css?family=Rubik&display=swap";
+    font-family: 'Libre Franklin', sans-serif;
+    src: "https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap";
+
 
 }
 
 :root{
     --black:#2e2e2e;
-    /* --main-font: Rubik */
+    --main-font: Libre Franklin
     
 }
 
-.header-item{
-    font-size: 1.2rem;
-    font-family: var(--main-font);
-    color: orchid;
-    background-color: orchid;
-}
-/* 
-ToDo: Actaually Style this. Find a font. Do the thing */
 .title{
     font-family: var(--main-font);
     color: var(--black);
     padding: 0.5rem;
     /* font-weight: 100; */
-    font-size: 2rem;
+    font-size: 2.8rem;
 }
 
 .sub-header{
@@ -39,12 +32,8 @@ p{
     text-align: left;
 }
 
-.contact-info{
-    color:palevioletred;
-}
-
 .footer{
-    /* position: fixed; */
+    font-family: var(--main-font);
     left: 0;
     bottom: 0;
     width: 100%;

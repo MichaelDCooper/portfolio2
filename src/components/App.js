@@ -27,7 +27,7 @@ const App = () => {
             <Route path="/Contact" component={Contact} />
             <Route path="/Uses" component={Uses} />
           </Switch>
-          <Footer />
+          <Footer className="footer" />
         </Container>
       </Router>
     </div>

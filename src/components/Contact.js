@@ -1,4 +1,7 @@
 import React from "react";
+import { Formik, Field } from "formik";
+import emailjs from "emailjs-com";
+
 import { Grid, List } from "semantic-ui-react";
 
 const Contact = () => {
@@ -63,6 +66,12 @@ const Contact = () => {
           </Grid.Column>
         </Grid.Row>
       </Grid>
+
+      <Formik initialValues={{ email: "", name: "", message: "" }}>
+        <Field type="email" name="email"></Field>
+        {/* <Field type="text" name="name"></Field> */}
+        {/* <Field as="textarea" type="text" name="message"></Field> */}
+      </Formik>
     </div>
   );
 };
