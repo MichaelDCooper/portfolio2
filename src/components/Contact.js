@@ -1,8 +1,7 @@
 import React from "react";
-import { Formik, Field } from "formik";
+import { Formik, Form, Field } from "formik";
 import emailjs from "emailjs-com";
-
-import { Grid, List } from "semantic-ui-react";
+import { Grid, List, Form as SForm, Header } from "semantic-ui-react";
 
 const Contact = () => {
   return (
@@ -66,11 +65,65 @@ const Contact = () => {
           </Grid.Column>
         </Grid.Row>
       </Grid>
+      <ContactForm />
+    </div>
+  );
+};
 
-      <Formik initialValues={{ email: "", name: "", message: "" }}>
-        <Field type="email" name="email"></Field>
-        {/* <Field type="text" name="name"></Field> */}
-        {/* <Field as="textarea" type="text" name="message"></Field> */}
+const ContactForm = () => {
+  return (
+    <div>
+      <Formik
+        initialValues={{ email: "", firstName: "", lastName: "", message: "" }}
+        onSubmit={(values, actions) => {
+          alert(JSON.stringify(values, null, 2));
+          actions.setSubmitting(false);
+        }}
+      >
+        <Form className="ui form">
+          <div className="equal width fields">
+            <div className="field">
+              <label>Email:</label>
+              <Field
+                className="ui fluid input"
+                type="email"
+                name="email"
+                autoComplete="off"
+              />
+            </div>
+            <div className="field">
+              <label>First Name:</label>
+              <Field
+                className="ui fluid input"
+                type="text"
+                name="firstName"
+                autoComplete="off"
+              />
+            </div>
+            <div className="field">
+              <label>Last Name:</label>
+              <Field
+                className="ui fluid input"
+                type="text"
+                name="lastName"
+                autoComplete="off"
+              />
+            </div>
+          </div>
+          <div className="field">
+            <label>Message:</label>
+            <Field
+              className="ui fluid input"
+              rows="17"
+              as="textarea"
+              multiline="true"
+              name="message"
+            />
+            <div className="field">
+              <button className="ui button">Submit</button>
+            </div>
+          </div>
+        </Form>
       </Formik>
     </div>
   );
