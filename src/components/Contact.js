@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
 import emailjs from "emailjs-com";
-import { Grid, List, Form as SForm, Header } from "semantic-ui-react";
+import { Grid, List } from "semantic-ui-react";
 
 const Contact = () => {
   return (
@@ -76,7 +76,8 @@ const ContactForm = () => {
       <Formik
         initialValues={{ email: "", firstName: "", lastName: "", message: "" }}
         onSubmit={(values, actions) => {
-          alert(JSON.stringify(values, null, 2));
+          sendEmail(values);
+          actions.resetForm();
           actions.setSubmitting(false);
         }}
       >
@@ -120,13 +121,39 @@ const ContactForm = () => {
               name="message"
             />
             <div className="field">
-              <button className="ui button">Submit</button>
+              <button className="ui button" type="submit">
+                Submit
+              </button>
             </div>
           </div>
         </Form>
       </Formik>
     </div>
   );
+};
+
+const sendEmail = ({ email, firstName, lastName, message }) => {
+  let template_params = {
+    from_name: firstName + " " + lastName,
+    from_email: email,
+    user_message: message
+  };
+
+  emailjs
+    .send(
+      "gmail",
+      "portfolio_site_template",
+      template_params,
+      "user_dVffXz8WGqtAVC99WwBni"
+    )
+    .then(
+      result => {
+        alert("Message Sent!");
+      },
+      error => {
+        console.log(error.text);
+      }
+    );
 };
 
 export default Contact;
