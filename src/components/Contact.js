@@ -3,6 +3,8 @@ import { Formik, Form, Field } from "formik";
 import emailjs from "emailjs-com";
 import { Grid, List } from "semantic-ui-react";
 
+// ToDo: Need to refactor both of these components to emphazize readability.
+
 const Contact = () => {
   return (
     <div>
