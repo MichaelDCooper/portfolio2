@@ -1,18 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Divider, Grid, Header, List } from "semantic-ui-react";
 import GithubActivity from "./GithubActivity";
-import github from "../github";
 
 const Projects = () => {
-  const [defaultGit, updateGit] = useState("Loading...");
-
-  const getGithub = async () => {
-    const gitResponse = await github.get("/users/MichaelDCooper/events/public");
-    console.log(gitResponse.data);
-  };
-
-  getGithub();
-
   return (
     <div>
       <h2 className="ui left aligned header">Projects and Repositories</h2>
@@ -48,7 +38,11 @@ const Projects = () => {
         <Grid.Column textAlign="left">
           <Header textAlign="left" as="h3">
             My Budget:
-            <a href="https://my-budge-client.now.sh/" target="_blank">
+            <a
+              href="https://my-budge-client.now.sh/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {" "}
               Link
             </a>
@@ -72,11 +66,9 @@ const Projects = () => {
           </List>
         </Grid.Column>
       </Grid>
-
       <Divider />
       <h2 className="ui left aligned header">Github Activity:</h2>
       <GithubActivity />
-      <div>{defaultGit}</div>
     </div>
   );
 };

@@ -8,10 +8,18 @@ const Footer = () => {
       </Header>
 
       <Header size="medium" floated="right">
-        <a href="https://github.com/MichaelDCooper" target="_blank">
+        <a
+          href="https://github.com/MichaelDCooper"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Icon name="github" color="grey" />
         </a>
-        <a href="https://www.linkedin.com/in/michaelcooper51/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/michaelcooper51/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Icon name="linkedin" color="grey" />
         </a>
       </Header>

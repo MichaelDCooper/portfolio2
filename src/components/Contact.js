@@ -37,7 +37,11 @@ const Contact = () => {
                 <List.Content>
                   <List.Header as="p">
                     Github:
-                    <a href="https://github.com/MichaelDCooper" target="_blank">
+                    <a
+                      href="https://github.com/MichaelDCooper"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {" "}
                       MichaelDCooper
                     </a>
@@ -56,6 +60,7 @@ const Contact = () => {
                     <a
                       href="https://www.linkedin.com/in/michaelcooper51/"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {" "}
                       MichaelCooper51
