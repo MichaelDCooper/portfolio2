@@ -1,37 +1,7 @@
 import React, { useState } from "react";
-import { Divider } from "semantic-ui-react";
+import { Divider, Grid, Header, List } from "semantic-ui-react";
+import GithubActivity from "./GithubActivity";
 import github from "../github";
-
-// const getGithub = async () => {
-//   const response = await github.get("/users/MichaelDCooper/events/public");
-
-//   updateGit(response.data);
-
-//   //TODO this is filtering the events recieved from github. Make this better
-//   // for (let i = 0; i < 5; i++) {
-//   //   const data = response.data[i];
-//   //   console.log(data);
-//   //   //this will filter commits
-//   //   // if (data.payload.commits) {
-//   //   //   console.log(data.payload.commits[0].message);
-//   //   // } else if (data.repo.name) {
-//   //   //   console.log(data);
-//   //   // }
-
-//   //   // if (!data.commits) {
-//   //   //   console.log(data);
-//   //   // }
-
-//   //   //console.log(response.data[i].payload.commits[i].message);
-//   //   //console.log(data);
-//   // }
-// };
-
-// {
-//   /* <h4>Action</h4>
-// <h3>Repo:</h3>
-// <p>Some Info about what I did</p> */
-// }
 
 const Projects = () => {
   const [defaultGit, updateGit] = useState("Loading...");
@@ -39,7 +9,6 @@ const Projects = () => {
   const getGithub = async () => {
     const gitResponse = await github.get("/users/MichaelDCooper/events/public");
     console.log(gitResponse.data);
-    // updateGit(["nesting", "some", "data"]);
   };
 
   getGithub();
@@ -52,8 +21,61 @@ const Projects = () => {
         well as a feed of my Github activity, so you can keep up to date with
         what I'm currently working on:
       </p>
+      <Grid stackable columns={2}>
+        <Grid.Column textAlign="left">
+          <Header textAlign="left" as="h3">
+            Portfolio Site (Meta):
+          </Header>
+          <List as="ol">
+            <List.Item as="li" value="-">
+              React App using only functional components (Hooks, Context)
+            </List.Item>
+            <List.Item as="li" value="-">
+              Implemented Axios to fetch Github data from Github API
+            </List.Item>
+            <List.Item as="li" value="-">
+              Implemented EmailJs to allow for fully functional Contact Form
+            </List.Item>
+            <List.Item as="li" value="-">
+              Used Sematic UI React, Google Font Libary, and Custom CSS to allow
+              for consistent styling
+            </List.Item>
+            <List.Item as="li" value="-">
+              Deployment/CI from Zeit using Now CLI
+            </List.Item>
+          </List>
+        </Grid.Column>
+        <Grid.Column textAlign="left">
+          <Header textAlign="left" as="h3">
+            My Budget:
+            <a href="https://my-budge-client.now.sh/" target="_blank">
+              {" "}
+              Link
+            </a>
+          </Header>
+          <List as="ol">
+            <List.Item as="li" value="-">
+              React App using only functional components (Hooks, Context)
+            </List.Item>
+            <List.Item as="li" value="-">
+              Used ChartJs for reactive data visualizations.
+            </List.Item>
+            <List.Item as="li" value="-">
+              Implemented Formik to handle over 20 user-generated data points.
+            </List.Item>
+            <List.Item as="li" value="-">
+              Custom form input validation, and data formatting.
+            </List.Item>
+            <List.Item as="li" value="-">
+              Deployment/CI from Zeit using Now CLI
+            </List.Item>
+          </List>
+        </Grid.Column>
+      </Grid>
+
       <Divider />
       <h2 className="ui left aligned header">Github Activity:</h2>
+      <GithubActivity />
       <div>{defaultGit}</div>
     </div>
   );
